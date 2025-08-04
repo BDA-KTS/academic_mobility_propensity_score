@@ -1,8 +1,8 @@
 # Applying Propensity Score Matching in R
 
 ## Description
-[Propensity score matching](https://en.wikipedia.org/wiki/Propensity_score_matching) is a method employed across diverse fields of research to assess the causal impact of treatments, interventions, or exposures in observational studies. By equating covariates between treatment and control groups, it mitigates bias and confounding, thereby enabling the estimation of causal effects. 
-In essence, propensity score matching constructs control and treatment groups that are highly comparable in terms of their individual characteristics. This process mitigates the influence of potential confounders, thus facilitating more accurate causal inferences.
+[Propensity score matching](https://en.wikipedia.org/wiki/Propensity_score_matching) is a method employed across diverse fields of research to assess the causal impact of treatments, interventions, or exposures in observational studies. Equating covariates between treatment and control groups mitigates bias and confounding, thereby enabling the estimation of causal effects. 
+In essence, propensity score matching constructs control and treatment groups that are highly comparable in terms of their characteristics. This process mitigates the influence of potential confounders, thus facilitating more accurate causal inferences.
 
 ## Use Cases
 - **Education Policy Evaluation**: [Assessing the impact of educational interventions on student outcomes](https://telearn.hal.science/hal-00190019/document)
@@ -47,14 +47,12 @@ A mean difference of 3.04 for the variable CPP indicates that, on average, the t
 ![](images/output_mainDiff.PNG)
 
 ## Hardware Requirements
-the method runs on a small virtual machine provided by a cloud computing company (2 x86 CPU core, 4 GB RAM, 40GB HDD). 
+The method runs on a small virtual machine provided by a cloud computing company (2 x86 CPU core, 4 GB RAM, 40GB HDD). 
 
 ## Environment Setup
-To run this method locally, ensure you have R (version  3.6.0 or higher) installed on your system.
+The required R packages (Matching and Tableone) are installed using through;  
 
-Install the required R packages:
-- Matching
-- tableone
+`Install.R`
 
 ## How to Use
 1. Download  ["mydata_sample.csv"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/method/mydata_sample.csv), ["propensity_matching_functions.R"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/method/propensity_matching_functions.R), and ["main_script.R"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/method/main_script.R) in a folder.
@@ -65,7 +63,7 @@ Install the required R packages:
     - Call the `perform_propensity_matching` function to conduct propensity score matching (line 15) with parameters data_sample, treatment_var, and covariates.  
       The output contains SMDs of unmatched/matched data (unmatched_smd in line 20)/matched_smd in line 21) and 
     - Define the variables of interest (vars_of_interest) (line 29) and Matched data (matched_data in line 24)
-    - Call the `calculate_mean_diff` function to calculate mean differences for variables of interest (line 33) with parameteres matched_data, treatment_var, and vars_of_interest. The output gets the mean differences of vars_of_interest. 
+    - Call the `calculate_mean_diff` function to calculate mean differences for variables of interest (line 33) with parameters matched_data, treatment_var, and vars_of_interest. The output gets the mean differences of vars_of_interest. 
 
 ## Technical Details
 ![](PS_explanation.jpg)
@@ -76,4 +74,4 @@ In the ball analogy, balls of similar size and color are matched between the tre
 It is used to construct control/treatment groups in scientific studies, in such a way that individuals in the control group are as similar as possible to individuals in the treatment group. 
 
 ## Contact Details
-For questions or feedback, contact [fakhri.momeni@gesis.org](mailto:fakhri.momeni@gesis.org).
+For questions or feedback, contact <fakhri.momeni@gesis.org>.
