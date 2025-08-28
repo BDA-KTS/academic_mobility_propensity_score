@@ -68,7 +68,7 @@ Run the commands in "main_script.R"
  - Call the `calculate_mean_diff` function to calculate mean differences for variables of interest (line 33) with parameters matched_data, treatment_var, and vars_of_interest. The output gets the mean differences of vars_of_interest. 
 
 ## Technical Details
-![](PS_explanation.jpg)
+![](images/PS_explanation.jpg)
 To elucidate, consider an example where two distinct groups of entities, represented by balls or ducks in our illustrations, are subjected to different conditions – treatment and control. The initial setup shows these entities with varying characteristics, such as size and color. The subsequent arrangement, either through sorting or linking, aims to pair entities with similar attributes across the treatment and control groups.
 
 In the ball analogy, balls of similar size and color are matched between the treatment and control groups, creating pairs where each treated entity corresponds to a similar untreated entity. Similarly, in the duck analogy, ducks with comparable features, like color and size, are connected to their counterparts in the comparison group, ensuring a balanced representation.
